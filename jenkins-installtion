@@ -1,0 +1,33 @@
+# By visiting the official Jenkins website, you can find installation steps for various operating systems. 
+ However, for this repository, I will be installing Jenkins on Ubuntu.
+
+# As we are creating jenkins master-agent architecture we will need 2 VM's. 
+
+# Master :
+
+jenkins official site :
+https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
+
+1. sudo apt update
+
+2. sudo apt install fontconfig openjdk-17-jre
+
+3. sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+4. echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+5. sudo apt-get install jenkins
+
+
+# After installing jenkins on master server,add port 8080 in security group to access jenkins.
+
+# Agent
+
+1. sudo apt update
+2. sudo apt install fontconfig openjdk-17-jre
+
+# There is no need to install jenkins on agent node but we have to install java as 
+all the jenkins jobs will run on agent node. java is dependency to work with jenkins.
