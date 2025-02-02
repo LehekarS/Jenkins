@@ -12,14 +12,12 @@ Customization – Can be tailored to fit different workflows and environments.
 # Jenkins Architecture & Usage
 Jenkins follows a Master-Slave Architecture, which consists of:
 
-# Jenkins Master :
-
+#Jenkins Master :
 Controls the overall workflow.
 Assigns tasks to worker nodes (agents/slaves).
 Manages job scheduling and monitoring.
 
-# Jenkins Agent (Slave):
-
+#Jenkins Agent (Slave):
 Executes assigned tasks like building and testing applications.
 Can run on different machines to distribute workloads.
 
