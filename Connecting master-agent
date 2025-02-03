@@ -1,0 +1,18 @@
+# We have successfully created 2 nodes for master and agent now
+
+On jenkins we'll connect the agent to master:
+1. Create ssh key pair on master.
+   * cd  ~/.ssh
+   * ssh-keygen
+2. copy private key 
+3. On jenkins UI : dashboard ---> Nodes ---> give name, desceiption and all other things
+4. Launch method (Launch agents via SSH) ----> host (Agent node IP) ----> Credentials of master node(paste private key of master)
+5. Check other configuration as you need
+6. Save 
+
+On agent node :
+1. cd  ~/.ssh 
+2. cat authorized_keys
+2. paste public key of master node in authorized_keys file
+
+# Agent has beed connected to Master
